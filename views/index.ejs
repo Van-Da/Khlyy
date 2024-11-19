@@ -1,0 +1,42 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danh Sách Người Dùng</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Danh sách người dùng</h1>
+      <a href="/add">Thêm người dùng mới</a>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Position</th>
+            <th>Salary</th>
+            <th>Hành Động</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% employee.forEach(employee => { %>
+          <tr>
+            <td><%= employee.name %></td>
+            <td><%= employee.email %></td>
+            <td><%= employee.position %></td>
+            <td><%= employee.salary %></td>
+            <td>
+              <a href="/edit/<%= employee._id %>">Chỉnh sửa</a>
+              <a
+                href="/delete/<%= employee._id %>"
+                onclick="return confirm('bạn có muốn xóa người dùng này không?');"
+                >Xóa</a
+              >
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

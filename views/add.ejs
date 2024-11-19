@@ -1,0 +1,30 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thêm người dùng</title>
+    <link rel="stylesheet" href="../public/css/style.css" />
+    <!-- Liên kết file CSS -->
+  </head>
+  <body>
+    <div class="container">
+      <h1>Thêm người dùng mới</h1>
+      <form action="/add" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required />
+
+        <label for="position">Position:</label>
+        <input type="text" name="position" id="position" required />
+
+        <label for="salary">Salary:</label>
+        <input type="number" name="salary" id="salary" required />
+
+        <button type="submit">Thêm</button>
+      </form>
+      <a href="/">Quay lại danh sách người dùng</a>
+    </div>
+  </body>
+</html>
